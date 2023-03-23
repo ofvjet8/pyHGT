@@ -90,6 +90,7 @@ def sample_subgraph(graph, time_range, sampled_depth = 2, sampled_number = 8, in
         We maintain budgets for each node type, indexed by <node_id, time>.
         Currently sampled nodes are stored in layer_data.
         After nodes are sampled, we construct the sampled adjacancy matrix.
+        서브그래프 샘플링 방법 ( Algorithm 1)
     '''
     layer_data  = defaultdict( #target_type
                         lambda: {} # {target_id: [ser, time]}
