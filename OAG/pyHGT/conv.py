@@ -216,7 +216,7 @@ class DenseHGTConv(MessagePassing):
                     '''
                         idx is all the edges with meta relation <source_type, relation_type, target_type>
                     '''
-                    idx = (edge_type == int(relation_type)) & tb
+                    idx = (edge_type == int(relation_type)) & tb # idx를 bit연산자로 사용하는 이유는??
                     if idx.sum() == 0:
                         continue
                     '''
